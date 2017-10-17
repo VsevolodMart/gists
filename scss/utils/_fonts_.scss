@@ -1,0 +1,51 @@
+
+    //AvenirNext-Regular
+$AvenirNext-Regular: 'AvenirNext-Regular';
+$AvenirNext-RegularPath: '../../fonts/AvenirNext-Regular';
+
+
+    //AvenirNext-Bold
+$AvenirNext-Bold: 'AvenirNext-Bold';
+$AvenirNext-BoldPath: '../../fonts/AvenirNext-Bold';
+
+@mixin AvenirNext-Regular($AvenirNext-Regular, $AvenirNext-RegularPath) {
+  @font-face {
+    font: {
+      family: $AvenirNext-Regular;
+      weight: normal;
+      style: normal;
+    }
+    src: url('#{$AvenirNext-RegularPath}.eot'); //IE9 Compat Modes
+    src: url('#{$AvenirNext-RegularPath}.eot?#iefix') format('embedded-opentype'), //IE6-IE8
+    url('#{$AvenirNext-RegularPath}.woff') format('woff'), //Modern Browsers
+    url('#{$AvenirNext-RegularPath}.woff2') format('woff2'), //Modern Browsers
+    url('#{$AvenirNext-RegularPath}.ttf') format('truetype'), //Safari, Android, iOS
+    url('#{$AvenirNext-RegularPath}.svg##{$AvenirNext-Regular}') format('svg'); //Old iOS devices
+  }
+}
+
+@mixin AvenirNext-Bold($AvenirNext-Bold, $AvenirNext-BoldPath) {
+  @font-face {
+    font: {
+      family: $AvenirNext-Bold;
+      weight: normal;
+      style: normal;
+    }
+    src: url('#{$AvenirNext-BoldPath}.eot'); //IE9 Compat Modes
+    src: url('#{$AvenirNext-BoldPath}.eot?#iefix') format('embedded-opentype'), //IE6-IE8
+    url('#{$AvenirNext-BoldPath}.woff') format('woff'), //Modern Browsers
+    url('#{$AvenirNext-BoldPath}.woff2') format('woff2'), //Modern Browsers
+    url('#{$AvenirNext-BoldPath}.ttf') format('truetype'), //Safari, Android, iOS
+    url('#{$AvenirNext-BoldPath}.svg##{$AvenirNext-Bold}') format('svg'); //Old iOS devices
+  }
+}
+
+
+@include AvenirNext-Regular($AvenirNext-Regular, $AvenirNext-RegularPath);
+@include AvenirNext-Bold($AvenirNext-Bold, $AvenirNext-BoldPath);
+
+
+
+
+
+
